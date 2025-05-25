@@ -1,38 +1,224 @@
-.App {
-  text-align: center;
+body {
+  margin    : 0;
+  padding   : 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  margin: 0 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.movie-list {
+  display        : flex;
+  justify-content: space-between;
+  flex-wrap      : wrap;
+  gap            : 10px;
+  overflow       : hidden;
+  cursor         : pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.movie-box {
+  width           : 250px;
+  height          : 100%;
+  /* border       : 2px solid red; */
+  border-radius   : 12px;
+  margin-bottom   : 10px;
+  overflow        : hidden;
+  box-shadow      : rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.movie-box .movie-image {
+  width       : 100%;
+  height      : 100%;
+  aspect-ratio: 2/3;
+}
+
+.movie-box .movie-image img {
+  width     : 100%;
+  object-fit: cover;
+}
+
+.movie-content {
+  padding-left: 20px;
+}
+
+.movie-content h3 {
+  margin-bottom: 0;
+}
+
+.movie-content p {
+  font-size: 14px;
+  color    : gray;
+}
+
+/* Filter Dropdown */
+.filter {
+  margin-bottom: 10px;
+}
+
+.filter-bars {
+  display        : flex;
+  justify-content: space-between;
+  align-items    : center;
+}
+
+.filter-dropdown {
+  border       : 1px solid rgb(222, 222, 222);
+  padding      : 5px 10px;
+  border-radius: 10px;
+}
+
+.pagination {
+  display        : flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items    : center;
+  margin         : 20px 0;
 }
 
-.App-link {
-  color: #61dafb;
+.movie-detail {
+  min-height: 100vh;
+  background: #0a1014;
+  color     : white;
+  padding   : 0 150px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.movie-banner {
+  height : 80vh;
+  display: flex;
+  padding: 20px;
+}
+
+.backdrop-image {
+  width        : 40%;
+  height       : auto;
+  aspect-ratio : 2/3;
+  border-radius: 12px;
+  overflow     : hidden;
+}
+
+.backdrop-image img {
+  width     : 100%;
+  height    : 100%;
+  object-fit: cover;
+}
+
+
+.movie-title-overlay h1 {
+  font-size    : 3rem;
+  margin-bottom: 20px;
+}
+
+.movie-meta {
+  display    : flex;
+  gap        : 20px;
+  font-size  : 1.1rem;
+  color      : gray;
+  align-items: center;
+}
+
+.rating {
+  color      : #fff;
+  font-size  : 1.1rem;
+  padding-top: 10px;
+  display    : flex;
+  align-items: center;
+  gap        : 20px;
+}
+
+.rating .score {
+  color          : #21d07a;
+  font-weight    : 600;
+  width          : 50px;
+  height         : 50px;
+  background     : #1E2330;
+  border-radius  : 50%;
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+}
+
+.movie-banner-content {
+  padding-left: 40px;
+  width       : 100%;
+  flex        : 1;
+}
+
+.overview-section {
+  margin-bottom: 40px;
+}
+
+.overview-section h2 {
+  font-size    : 1.8rem;
+  margin-bottom: 20px;
+}
+
+.overview-section p {
+  line-height   : 1.2;
+  font-size     : 1.1rem;
+  color         : gray;
+  letter-spacing: 0.7px;
+}
+
+.credits-section {
+  padding-left  : 20px;
+  padding-bottom: 20px;
+}
+
+.cast-list {
+  display              : grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap                  : 40px;
+  margin-top           : 20px;
+}
+
+.cast-card {
+  background   : #1a2127;
+  border-radius: 8px;
+  overflow     : hidden;
+}
+
+.cast-image {
+  width       : 100%;
+  height      : auto;
+  aspect-ratio: 1/1;
+}
+
+.cast-image img {
+  width     : 100%;
+  height    : 100%;
+  object-fit: cover;
+}
+
+.cast-info {
+  padding: 15px;
+}
+
+.cast-info h3 {
+  margin   : 0;
+  font-size: 1.1rem;
+}
+
+.cast-info p {
+  margin: 5px 0 0;
+  color : #8b98a5;
+}
+
+.crew-section {
+  margin-top: 40px;
+}
+
+.crew-grid {
+  display              : grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap                  : 30px;
+}
+
+.crew-item h4 {
+  margin   : 0;
+  font-size: 1.1rem;
+}
+
+.crew-item p {
+  margin: 5px 0 0;
+  color : #8b98a5;
 }
